@@ -12,44 +12,27 @@ AI 피부 진단: 사용자가 업로드한 사진과 입력 정보를 바탕으
 
 사용자 정보 표시: 현재 사용자 ID와 IP 주소를 모달로 표시하여 디버깅 및 사용자 식별에 도움을 줍니다.
 
-사용자 정보 저장 등의 기능은 로컬 저장소를 사용합니다.
-
 ## <기술 스택>
 프론트엔드,"React (Hooks: useState, useEffect)",단일 페이지 애플리케이션(SPA) 구현
-
 상태 관리,React Local State,"skinNotes, result, page 등"
-
 로컬 저장소,Web Storage (localStorage),스킨 노트 기록 저장 및 관리
-
 API 통신,Fetch API,백엔드 AI 분석 API와 통신
-
 스타일링,"Pure CSS (App.css), Inline Style",
 
 ## <파일 구조 및 컴포넌트>
 모든 기능은 단일 파일인 App.js 내에서 컴포넌트 단위로 관리되고 있습니다.
 
 startDiagnosis,백엔드 AI 분석 API 요청 처리 (핵심 비즈니스 로직)
-
 loadSkinNotes,Local Storage에서 스킨 노트 로드
-
 saveSkinNote,Local Storage에 스킨 노트 저장
-
 deleteSkinNote,Local Storage에서 특정 스킨 노트 삭제 (New)
-
 App (Function),"메인 애플리케이션 로직, 상태 관리, 라우팅 담당"
-
 HomePage,메인 진단 페이지
-
 DiagnosisResultPage,AI 진단 결과 표시 페이지
-
 SkinNoteHistoryPage,스킨 노트 기록 목록 및 삭제 기능 (Modified)
-
 SkinNotePage,새로운 스킨 노트 작성 페이지
-
 ContrastPage,과거 기록 비교 분석 페이지
-
 UserInfoModal,사용자 ID/IP 표시 모달
-
 DeleteConfirmModal,기록 삭제 확인 모달 (New)
 
 ## <주요 업데이트 및 변경 사항>
@@ -80,18 +63,19 @@ SkinNoteHistoryPage 컴포넌트 수정:
 필요한 의존성(React)을 설치합니다. (CRA 등으로 시작된 프로젝트 가정)
 
 1.
-bash
+```bash
 ## Node.js가 설치되어 있어야 합니다.
 npm install 
----------------
+## 또는
 yarn install
 
 2.
-bash
+
+```bash
 npm start
----------------
+## 또는
 npm run start
----------------
+## 또는
 yarn start
 
 
